@@ -9,6 +9,7 @@ import TourPackages from "./Pages/TourPackages.jsx";
 import PackagesDetails from "./Pages/PackagesDetails.jsx";
 import PlacesRoute from "./Pages/PlacesRoute.jsx";
 import NoPage from "./Pages/NoPage.jsx";
+import Reviews from "./Pages/Reviews.jsx";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
              <Route path="/" element={<Layout />} >
                  <Route index element={<Home />} />
                  <Route path="/about" element={<AboutUs />} />
+                 <Route path="/reviews" element={<Reviews />} />
                  <Route path="/destinations" element={<Destinations />} />
                  <Route path="/contactUs" element={<ContactUs />} />
                  <Route path="/tourPackages" element={<TourPackages />} />
