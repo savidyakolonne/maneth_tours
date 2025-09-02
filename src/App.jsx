@@ -2,14 +2,16 @@ import React from "react";
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 import Layout from "./Pages/Layout.jsx";
 import Home from "./Pages/Home.jsx";
-import AboutUs from "./Pages/AboutUs.jsx";
-import Destinations from "./Pages/Destinations.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
-import TourPackages from "./Pages/TourPackages.jsx";
-import PackagesDetails from "./Pages/PackagesDetails.jsx";
-import PlacesRoute from "./Pages/PlacesRoute.jsx";
-import NoPage from "./Pages/NoPage.jsx";
-import Reviews from "./Pages/Reviews.jsx";
+import Package3 from "./Pages/Package3.jsx";
+import Package2 from "./Pages/Package2.jsx";
+import Package1 from "./Pages/Package1.jsx";
+import Package4 from "./Pages/Package4.jsx";
+import AboutUsPage from "./Pages/AboutusPage.jsx";
+import TourPackagesPage from "./Pages/TourPackagesPage.jsx";
+import ReviewsPage from "./Pages/ReviewsPage";
+import DestinationsPage from "./Pages/DestinationsPage.jsx";
+import PrivayPolicy from "./Pages/PrivayPolicy.jsx";
 
 
 function App() {
@@ -21,14 +23,23 @@ function App() {
 
              <Route path="/" element={<Layout />} >
                  <Route index element={<Home />} />
-                 <Route path="/about" element={<AboutUs />} />
-                 <Route path="/reviews" element={<Reviews />} />
-                 <Route path="/destinations" element={<Destinations />} />
+                 <Route path="/about" element={<AboutUsPage />} />
+
+                 <Route path="/reviews" element={<ReviewsPage />} />
+
+                 <Route path="/destinations" element={<DestinationsPage/>} />
+
                  <Route path="/contactUs" element={<ContactUs />} />
-                 <Route path="/tourPackages" element={<TourPackages />} />
-                 <Route path="/tourPackages/:id" element={<PackagesDetails />} />
-                 <Route path="/places" element={<PlacesRoute />} />
-                 <Route path="*" element={<NoPage />} />
+
+                 <Route path="/tourPackages" element={<TourPackagesPage />} />
+
+                 <Route path="/tourPackages/Package1" element={<Package1 />} />
+                 <Route path="/tourPackages/Package2" element={<Package2 />} />
+                 <Route path="/tourPackages/Package3" element={<Package3 />} />
+                 <Route path="/tourPackages/Package4" element={<Package4 />} />
+
+                 <Route path="/privacy" element={<PrivayPolicy />} />
+
              </Route>
         </Routes>
      </BrowserRouter>
